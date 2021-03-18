@@ -1,0 +1,8 @@
+[package]
+name = "hl"
+version = "0.1.0"
+authors = ["William Lewis <william.lewis112358@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+clap = "2"

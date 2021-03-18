@@ -1,0 +1,84 @@
+@font-face {
+  font-family: "Fira Code";
+  src: url(../fonts/FiraCode-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  src: url(../fonts/FiraSans-Regular.ttf);
+}
+
+/* "Theming" for the generated class names (using the "Solarized" colors) */
+:root {
+  --base03: #002b36;
+  --base02: #073642;
+  --base01: #586e75;
+  --base00: #657b83;
+  --base0: #839496;
+  --base1: #93a1a1;
+  --base2: #eee8d5;
+  --base3: #fdf6e3;
+  --yellow: #b58900;
+  --orange: #cb4b16;
+  --red: #dc322f;
+  --magenta: #d33682;
+  --violet: #6c71c4;
+  --blue: #268bd2;
+  --cyan: #2aa198;
+  --green: #859900;
+}
+
+html {
+  font-family: "Fira Sans", sans-serif;
+  background-color: var(--base3);
+}
+
+html,
+body {
+  margin: 0;
+}
+
+body {
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+h2 {
+  font-size: 22px;
+  margin: unset;
+  color: var(--base03);
+}
+
+pre {
+  font-family: "Fira Code", monospace;
+  font-size: 16px;
+}
+
+.delim {
+  color: var(--base03);
+}
+
+.symbol {
+  color: var(--blue);
+}
+
+.number {
+  color: var(--red);
+}
+
+.bool {
+  color: var(--cyan);
+}
+
+.string {
+  color: var(--yellow);
+}
+
+.comment {
+  color: var(--base00);
+  font-style: italic;
+}
+
+.quote {
+  color: var(--orange);
+}

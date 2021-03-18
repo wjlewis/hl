@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Scheme Test</title>
+
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <section>
+      <h2>Here is some Scheme code:</h2>
+
+      <!-- This was generated from the Scheme file next door -->
+      <pre><span class="comment">;; Constructs a new list by applying `f` to each element of `xs`.</span><span class="whitespace">
+</span><span class="delim">(</span><span class="symbol">define</span><span class="whitespace"> </span><span class="delim">(</span><span class="symbol">map</span><span class="whitespace"> </span><span class="symbol">f</span><span class="whitespace"> </span><span class="symbol">xs</span><span class="delim">)</span><span class="whitespace">
+  </span><span class="delim">(</span><span class="symbol">if</span><span class="whitespace"> </span><span class="delim">(</span><span class="symbol">null?</span><span class="whitespace"> </span><span class="symbol">xs</span><span class="delim">)</span><span class="whitespace">
+      </span><span class="quote">'</span><span class="delim">(</span><span class="delim">)</span><span class="whitespace">
+      </span><span class="delim">(</span><span class="symbol">cons</span><span class="whitespace"> </span><span class="delim">(</span><span class="symbol">f</span><span class="whitespace"> </span><span class="delim">(</span><span class="symbol">car</span><span class="whitespace"> </span><span class="symbol">xs</span><span class="delim">)</span><span class="delim">)</span><span class="whitespace">
+            </span><span class="delim">(</span><span class="symbol">map</span><span class="whitespace"> </span><span class="symbol">f</span><span class="whitespace"> </span><span class="delim">(</span><span class="symbol">cdr</span><span class="whitespace"> </span><span class="symbol">xs</span><span class="delim">)</span><span class="delim">)</span><span class="delim">)</span><span class="delim">)</span><span class="delim">)</span><span class="whitespace">
+
+</span><span class="comment">;; Tests if `n` is even</span><span class="whitespace">
+</span><span class="comment">;; Note the use of mutual recursion via `odd`.</span><span class="whitespace">
+</span><span class="delim">(</span><span class="symbol">define</span><span class="whitespace"> </span><span class="delim">(</span><span class="symbol">even?</span><span class="whitespace"> </span><span class="symbol">n</span><span class="delim">)</span><span class="whitespace">
+  </span><span class="delim">(</span><span class="symbol">if</span><span class="whitespace"> </span><span class="delim">(</span><span class="symbol">=</span><span class="whitespace"> </span><span class="symbol">n</span><span class="whitespace"> </span><span class="number">0</span><span class="delim">)</span><span class="whitespace">
+      </span><span class="bool">#t</span><span class="whitespace">
+      </span><span class="delim">(</span><span class="symbol">odd?</span><span class="whitespace"> </span><span class="delim">(</span><span class="symbol">-</span><span class="whitespace"> </span><span class="symbol">n</span><span class="whitespace"> </span><span class="number">1</span><span class="delim">)</span><span class="delim">)</span><span class="delim">)</span><span class="delim">)</span><span class="whitespace">
+
+</span><span class="delim">(</span><span class="symbol">define</span><span class="whitespace"> </span><span class="delim">(</span><span class="symbol">odd?</span><span class="whitespace"> </span><span class="symbol">n</span><span class="delim">)</span><span class="whitespace">
+  </span><span class="delim">(</span><span class="symbol">if</span><span class="whitespace"> </span><span class="delim">(</span><span class="symbol">=</span><span class="whitespace"> </span><span class="symbol">n</span><span class="whitespace"> </span><span class="number">0</span><span class="delim">)</span><span class="whitespace">
+      </span><span class="bool">#f</span><span class="whitespace">
+      </span><span class="delim">(</span><span class="symbol">even?</span><span class="whitespace"> </span><span class="delim">(</span><span class="symbol">-</span><span class="whitespace"> </span><span class="symbol">n</span><span class="whitespace"> </span><span class="number">1</span><span class="delim">)</span><span class="delim">)</span><span class="delim">)</span><span class="delim">)</span><span class="whitespace">
+
+</span><span class="comment">;; Constructs a new symbol by adding ".&lt;i&gt;" to `sym`</span><span class="whitespace">
+</span><span class="delim">(</span><span class="symbol">define</span><span class="whitespace"> </span><span class="delim">(</span><span class="symbol">add-index</span><span class="whitespace"> </span><span class="symbol">sym</span><span class="whitespace"> </span><span class="symbol">i</span><span class="delim">)</span><span class="whitespace">
+  </span><span class="delim">(</span><span class="symbol">string-&gt;symbol</span><span class="whitespace">
+    </span><span class="delim">(</span><span class="symbol">string-append</span><span class="whitespace"> </span><span class="delim">(</span><span class="symbol">symbol-&gt;string</span><span class="whitespace"> </span><span class="symbol">sym</span><span class="delim">)</span><span class="whitespace">
+                   </span><span class="string">"."</span><span class="whitespace">
+                   </span><span class="delim">(</span><span class="symbol">number-&gt;string</span><span class="whitespace"> </span><span class="symbol">i</span><span class="delim">)</span><span class="delim">)</span><span class="delim">)</span><span class="delim">)</span><span class="whitespace">
+
+</span><span class="delim">(</span><span class="symbol">define</span><span class="whitespace"> </span><span class="symbol">quux</span><span class="whitespace"> </span><span class="delim">(</span><span class="symbol">add-index</span><span class="whitespace"> </span><span class="string">"my-symbol"</span><span class="whitespace"> </span><span class="number">42</span><span class="delim">)</span><span class="delim">)</span></pre>
+    </section>
+  </body>
+</html>
